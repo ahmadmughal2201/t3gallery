@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
 
-      <html lang="en" className={`${GeistSans.variable}`}>
+      <html lang="en" className={`${GeistSans.variable} bg-gradient-to-b  from-[#15162c] to-[#110620]`}>
         <body>
           <TopNavBar/>
           {children}
