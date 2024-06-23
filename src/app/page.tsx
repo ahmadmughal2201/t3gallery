@@ -16,8 +16,8 @@ const mockImages = mockUrls.map((url, index) => ({
 
 export default function HomePage() {
   return (
-    <main className="bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white h-full flex items-center justify-center">
-      <div className="grid grid-cols-3 gap-1 w-2/3 ">
+    <main className="bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white h-full flex justify-center">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-1 w-2/3 p-4">
         {[...mockImages,...mockImages,...mockImages].map((image, index) => (
           <div
             key={image.id + "-" + index}
