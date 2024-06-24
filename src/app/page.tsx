@@ -1,14 +1,14 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import Link from "next/link";
 import { db } from "~/server/db";
+import { getMyImages } from "~/server/queries";
 export const dynamic = "force-dynamic";
 
 async function Gallery() {
-  const Images = await db.query.images.findMany({
-    orderBy: (model, { desc }) => desc(model.id),
-  });
+  const Images = await getMyImages();
+
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-1 w-2/3 p-4">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-1 w-full md:w-2/3 p-4 h-full">
       {Images.map((image, index) => (
         <div
           key={image.id}
@@ -30,7 +30,7 @@ async function Gallery() {
 
 export default async function HomePage() {
   return (
-    <main className="text-white h-full flex justify-center">
+    <main className="text-white h-screen flex justify-center ">
       <SignedOut>
         <div className="text-xl font-semibold text-center h-screen pt-10">Please Sign In above</div>
       </SignedOut>
