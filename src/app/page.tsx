@@ -29,7 +29,7 @@ async function Gallery() {
             await deleteImage(image.id);
           }}>
             <button
-            className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity"
+            className="absolute top-2 right-2 bg-gray-400/30 border-black text-white px-2 py-1 rounded opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity"
 
             >
               Delete
